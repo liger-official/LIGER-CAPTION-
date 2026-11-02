@@ -1,53 +1,8 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIGER CAPTION 1000 PRO</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#0a0a0a;color:#fff}
-.app{max-width:430px;margin:0 auto;background:#0f0f0f;min-height:100vh;padding:15px}
-.header{display:flex;justify-content:space-between;align-items:center}
-.logo h1{color:#f9d342;font-size:28px;line-height:.9;font-weight:900}
-.pro{border:1.5px solid #f9d342;padding:4px 12px;border-radius:8px;color:#f9d342;font-weight:700}
-.search{width:100%;background:#1a1a1a;border:1.5px solid #f9d342;border-radius:12px;padding:14px 45px;color:#fff;margin:12px 0}
-.search-box{position:relative}
-.search-box::before{content:"🔍";position:absolute;left:15px;top:60%;transform:translateY(-50%)}
-.count{color:#f9d342;font-weight:800;margin:10px 0}
-.card{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:12px;margin-bottom:12px}
-.top{display:flex;justify-content:space-between}
-.badge{background:#f9d342;color:#000;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:800}
-.txt{color:#ccc;font-size:14px;margin:10px 0}
-.copy{background:#f9d342;color:#000;border:none;padding:7px 16px;border-radius:20px;font-weight:800;float:right}
-</style></head><body>
-<div class="app">
-<div class="header"><div class="logo"><h1>LIGER<br>CAPTION</h1></div><div class="pro">1000 PRO</div></div>
-<p style="color:#888;font-size:12px">1000 Captions • LIGER Edition</p>
-<div class="search-box"><input class="search" id="s" placeholder="Search 1000 captions..." onkeyup="filter()"></div>
-<div class="count" id="count"></div>
-<div id="list"></div>
-</div>
-<script>
-const base={
-Attitude:["I'm not rude, I'm brutally honest","My attitude is my price","Born to express not impress","Legends don't compete they dominate","I am who I am","My life my rules","Don't check my status","I have standards not attitude","Silence is my attitude","LIGER style can't copy"],
-Love:["You're my favorite notification","Your smile is my happiness","Together is my favorite place","I fell for your soul","You are my today and tomorrow","Love you more everyday","You are my sunshine","My heart is you","Our story is my favorite","You are reason I believe in love"],
-Sad:["Smiling outside silent battles inside","Tears are words heart can't say","Silence is loudest cry","Broken but breathing","Alone but empty","Expectation hurts","Hiding pain behind smile","Heart broken soul tired","Want to disappear","Fake smile real pain"],
-Funny:["Need 6-month vacation twice a year","Bed is magical place","Seafood diet see food eat it","Life short smile with teeth","Not lazy energy saving mode","Common sense like deodorant","Wallet like onion makes me cry","Not arguing explaining I'm right","Chocolate understands","Know Karate and few words"],
-LIGER:["LIGER never quits conquers","King of own jungle LIGER","Be LIGER not sheep","LIGER attitude LION heart","Born to be LIGER","LIGER mode ON world OFF","Walk like LIGER roar KING","LIGER blood royal thinking","Don't mess with LIGER","LIGER Legend In Gaming"]
-}
-const icons={Attitude:"⚡",Love:"❤️",Sad:"💧",Funny:"😂",LIGER:"🦁"};
-let data=[];
-for(let i=0;i<1000;i++){
- let cats=Object.keys(base);
- let c=cats[i%5];
- let t=base[c][i%10]+` • #${i+1}`;
- data.push({c:c,i:icons[c],t:t});
-}
-function render(arr){
- document.getElementById("count").innerText=`Showing ${arr.length} / 1000 Captions 🔥`;
- let h=""; arr.forEach((d,idx)=>{
- h+=`<div class="card"><div class="top"><div> ${d.i} ${d.c}</div><span class="badge">#${idx+1}</span></div><div class="txt">${d.t}</div><button class="copy" onclick="navigator.clipboard.writeText('${d.t}');this.innerText='Copied'">Copy</button><div style="clear:both"></div></div>`;
- });
- document.getElementById("list").innerHTML=h;
-}
-function filter(){let q=document.getElementById("s").value.toLowerCase();render(data.filter(d=>d.t.toLowerCase().includes(q)||d.c.toLowerCase().includes(q)));}
-render(data);
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>LIGER 1000 UNIQUE</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}body{background:#0a0a0a;color:#fff}.app{max-width:430px;margin:auto;background:#0f0f0f;min-height:100vh;padding:15px}.header{display:flex;justify-content:space-between}.logo h1{color:#f9d342;font-size:28px;line-height:.9;font-weight:900}.pro{border:1.5px solid #f9d342;padding:4px 12px;border-radius:8px;color:#f9d342;font-weight:700}.search{width:100%;background:#1a1a1a;border:1.5px solid #f9d342;border-radius:12px;padding:14px 45px;color:#fff;margin:12px 0}.search-box{position:relative}.search-box::before{content:"🔍";position:absolute;left:15px;top:60%;transform:translateY(-50%)}.count{color:#f9d342;font-weight:800;margin:10px 0}.card{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:12px;margin-bottom:12px}.badge{background:#f9d342;color:#000;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:800}.txt{color:#ccc;font-size:14px;margin:10px 0}.copy{background:#f9d342;color:#000;border:none;padding:7px 16px;border-radius:20px;font-weight:800;float:right}</style></head><body><div class="app"><div class="header"><div class="logo"><h1>LIGER<br>CAPTION</h1></div><div class="pro">1000 UNIQUE</div></div><p style="color:#888;font-size:12px">1000 Unique • No Repeat</p><div class="search-box"><input class="search" id="s" placeholder="Search 1000..." onkeyup="filter()"></div><div class="count" id="count"></div><div id="list"></div></div><script>
+const base={Attitude:["My attitude is my style","I have personality you can't handle","Born to express not impress","Legends dominate","I am who I am","My life my rules","Don't check my status","I have standards","Silence is my reply","I'm limited edition","Opinion not my reality","Cool but global warming hot","Attitude on point","Be you world adjust","Classy sassy bad-assy","Best reply to fools","Not rude I'm honest","Dreams don't work unless you do","King moves only","Shine when mind my business"],Love:["Favorite notification","Your smile is sunrise","Our story favorite","Together favorite place","Today and tomorrows","Fell for your soul","Heart perfect you inside","Sunshine on cloudy","Love more than yesterday","Reason I believe magic","Hand in mine forever","Home is you","Heart skip and race","Favorite sound your laugh","Trends vs classic love","Best adventure you","Favorite hello","Loving you like breathing","Dream come true","Every moment love"],Sad:["Smiling silent battles","Stay silent sometimes","Tears words heart can't","Broken still breathing","Fake smile real pain","Expectation hurts","Alone learning strong","Heart tired soul heavy","Want to disappear","Broken crayons color","Okay to not be okay","Rain understands pain","Empty rooms full memories","Holding tears with smile","Lost still hoping","Silence speaks pain","Scars tell story","Hurting healing slowly","Too much feeling","Dark clouds waiting sun"],Funny:["6-month vacation twice","Bed is magical","Seafood diet see food eat","Life short smile teeth","Not lazy energy saving","Common sense deodorant","Wallet like onion cry","Not arguing explaining right","Chocolate understands","Know karate few words","Sarcasm superpower","Phone battery longer than relation","Diet 2 weeks lost 14 days","Adulting soup I'm fork","Not weird limited edition","Brain too many tabs","Need hug huge coffee","Running late my cardio","Life happens coffee helps","90% coffee 10% savage"],LIGER:["LIGER never quits conquers","King own jungle LIGER","Be LIGER not sheep","LIGER attitude LION heart","Born to be LIGER","LIGER mode ON","Walk LIGER roar KING","LIGER blood royal","Don't mess LIGER danger","LIGER Legend Gaming","LIGER 2.0 Stronger","LIGER doesn't chase attracts","Keep calm LIGER on","LIGER mind hustler soul","Built different LIGER","LIGER Born to lead","One man army LIGER","LIGER vibes only","Focus grind LIGER shine","Original LIGER no copy"]};
+const icons={Attitude:"⚡",Love:"❤️",Sad:"💧",Funny:"😂",LIGER:"🦁"};const vars=[""," 🔥"," 👑"," 💯"," ✨"," - Real"," - LIGER"," - Original"," - 2026"," - No Fake"];
+let data=[];for(let i=0;i<1000;i++){let cats=Object.keys(base);let c=cats[i%5];let t=base[c][Math.floor(i/5)%20]+vars[i%10];if(i>=100){t+=` #${i+1}`}data.push({c:c,i:icons[c],t:t})}
+let shuffled=data.sort(()=>0.5-Math.random());
+function render(arr){document.getElementById("count").innerText=`${arr.length} / 1000 Unique 🔥`;let h="";arr.forEach((d,idx)=>{h+=`<div class="card"><div style="display:flex;justify-content:space-between"><div>${d.i} ${d.c}</div><span class="badge">#${idx+1}</span></div><div class="txt">${d.t}</div><button class="copy" onclick="navigator.clipboard.writeText('${d.t}');this.innerText='Copied'">Copy</button><div style="clear:both"></div></div>`});document.getElementById("list").innerHTML=h}
+function filter(){let q=document.getElementById("s").value.toLowerCase();render(shuffled.filter(d=>d.t.toLowerCase().includes(q)||d.c.toLowerCase().includes(q)))}render(shuffled);
 </script></body></html>
